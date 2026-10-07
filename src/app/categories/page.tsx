@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { categories } from "@/lib/content";
+
+export const metadata = { title: "All Categories", description: "Browse 100 focused categories and 10,000 practical guides from WebBacklink." };
+export default function CategoriesPage() { return <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8"><p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Content library</p><h1 className="mt-3 text-4xl font-black">All categories</h1><p className="mt-4 max-w-2xl text-lg text-slate-600">Explore a focused collection of practical guides organized by useful subject and topic.</p><div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{categories.map((category) => <Link key={category.slug} href={`/categories/${category.slug}`} className="rounded-2xl border border-slate-200 p-6 hover:border-emerald-300 hover:bg-emerald-50"><span className="text-xs font-bold uppercase tracking-wider text-emerald-700">{category.parent}</span><h2 className="mt-2 text-xl font-bold">{category.name}</h2><p className="mt-2 text-sm leading-6 text-slate-600">{category.description}</p></Link>)}</div></div>; }

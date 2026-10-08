@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: ["practical guides", "productivity", "remote work", "digital skills", "workflow"],
+  verification: { google: "uC4eciySVM-7eN-fil7vy_x6uesETXAFomlBLp0Cr0s" },
   openGraph: { type: "website", locale: "en_US", siteName: siteConfig.name, title: `${siteConfig.name} | Practical Guides`, description: siteConfig.description },
   twitter: { card: "summary_large_image", title: `${siteConfig.name} | Practical Guides`, description: siteConfig.description },
   robots: { index: true, follow: true },
